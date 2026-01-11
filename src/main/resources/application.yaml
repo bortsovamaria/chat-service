@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: chat-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5436/dialog
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:mySuperSecretKeyThatIsAtLeast32CharactersLong!}
+    expiration: 86400000 # 24 часа
+
+server:
+  port: 8081
+
+logging:
+  org.springframework.security: INFO
