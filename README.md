@@ -56,3 +56,5 @@ JOIN messages ON shard_name = 'messages_' || shardid::text
 WHERE table_name = 'messages'
 GROUP BY shardid, nodename, nodeport
 ORDER BY shardid;
+
+Ключ шардирования - from_user_id
